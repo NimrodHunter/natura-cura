@@ -1,10 +1,9 @@
 {
   "name": "natura-cura",
   "version": "0.1.0",
-  "private": false,
-  "description": "web personal sanador Anibal Catalán",
-  "repository": "",
-  "licence": "MIT",
+  "description": "Web personal sanador Anibal Catalán",
+  "repository": "https://github.com/NimrodHunter/natura-cura",
+  "license": "MIT",
   "dependencies": {
     "@types/bootstrap": "^4.3.1",
     "@types/jest": "^24.0.18",
