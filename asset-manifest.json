@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/NimrodHunter/natura-cura/static/css/main.5495d3b4.chunk.css",
-    "main.js": "/NimrodHunter/natura-cura/static/js/main.21e257d5.chunk.js",
-    "main.js.map": "/NimrodHunter/natura-cura/static/js/main.21e257d5.chunk.js.map",
+    "main.js": "/NimrodHunter/natura-cura/static/js/main.661842e2.chunk.js",
+    "main.js.map": "/NimrodHunter/natura-cura/static/js/main.661842e2.chunk.js.map",
     "runtime-main.js": "/NimrodHunter/natura-cura/static/js/runtime-main.96bbcd8a.js",
     "runtime-main.js.map": "/NimrodHunter/natura-cura/static/js/runtime-main.96bbcd8a.js.map",
     "static/css/2.de424728.chunk.css": "/NimrodHunter/natura-cura/static/css/2.de424728.chunk.css",
-    "static/js/2.b14b524e.chunk.js": "/NimrodHunter/natura-cura/static/js/2.b14b524e.chunk.js",
-    "static/js/2.b14b524e.chunk.js.map": "/NimrodHunter/natura-cura/static/js/2.b14b524e.chunk.js.map",
+    "static/js/2.6a9f2815.chunk.js": "/NimrodHunter/natura-cura/static/js/2.6a9f2815.chunk.js",
+    "static/js/2.6a9f2815.chunk.js.map": "/NimrodHunter/natura-cura/static/js/2.6a9f2815.chunk.js.map",
     "index.html": "/NimrodHunter/natura-cura/index.html",
-    "precache-manifest.6d457aaa7a34655b5c9bfb19f6100863.js": "/NimrodHunter/natura-cura/precache-manifest.6d457aaa7a34655b5c9bfb19f6100863.js",
+    "precache-manifest.680f5e854a60829aaab97f3003574d74.js": "/NimrodHunter/natura-cura/precache-manifest.680f5e854a60829aaab97f3003574d74.js",
     "service-worker.js": "/NimrodHunter/natura-cura/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/NimrodHunter/natura-cura/static/css/2.de424728.chunk.css.map",
     "static/css/main.5495d3b4.chunk.css.map": "/NimrodHunter/natura-cura/static/css/main.5495d3b4.chunk.css.map",
@@ -27,8 +27,8 @@
   "entrypoints": [
     "static/js/runtime-main.96bbcd8a.js",
     "static/css/2.de424728.chunk.css",
-    "static/js/2.b14b524e.chunk.js",
+    "static/js/2.6a9f2815.chunk.js",
     "static/css/main.5495d3b4.chunk.css",
-    "static/js/main.21e257d5.chunk.js"
+    "static/js/main.661842e2.chunk.js"
   ]
 }
