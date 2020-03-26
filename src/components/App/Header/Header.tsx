@@ -24,7 +24,6 @@ const HeaderStyle = styled("header")`
   font-family: futura-pt, sans-serif;
   font-size: 15px;
   text-transform: uppercase;
-  text-decoration: none;
   letter-spacing: 2px;
   font-weight: 500;
   line-height: 1em;
@@ -62,7 +61,6 @@ const HeaderStyle = styled("header")`
 
     a {
       color: #fff;
-      text-decoration: none;
       padding: 10px 10px 10px 10px;
     }
 
@@ -97,7 +95,6 @@ const HeaderStyle = styled("header")`
 
       a {
         color: #fff;
-        text-decoration: none;
         padding: 10px 10px 10px 10px;
 
         :hover {
@@ -146,7 +143,6 @@ const SideBarStyle = styled("div")`
   font-family: futura-pt, sans-serif;
   font-size: 15px;
   text-transform: uppercase;
-  text-decoration: none;
   letter-spacing: 2px;
   font-weight: 500;
   line-height: 2.5em;
@@ -173,7 +169,6 @@ const SideBarStyle = styled("div")`
 
     a {
       color: #fff;
-      text-decoration: none;
       padding: 10px 10px 10px 10px;
 
       :hover {

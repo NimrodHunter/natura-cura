@@ -45,7 +45,6 @@ const CertificateBtnStyle = styled("button")`
     font-family: futura-pt, sans-serif;
     font-size: 15px;
     text-transform: uppercase;
-    text-decoration: none;
     letter-spacing: 2px;
     font-weight: 500;
     line-height: 2em;
@@ -72,7 +71,6 @@ const CertificateBtnStyle = styled("button")`
     a {
       color: #fff;
       background: transparent;
-      text-decoration: none;
 
       :hover, :active {
         outline: 0;

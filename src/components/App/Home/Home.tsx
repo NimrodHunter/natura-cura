@@ -15,7 +15,6 @@ const HomeStyle = styled("div")`
   text-align: center;
   text-rendering: optimizeLegibility;
   font-family: futura-pt, sans-serif;
-  font-margin: 0 10% 0 10%;
   font-weight: lighter;
   font-style: normal;
   font-size: 30px;
