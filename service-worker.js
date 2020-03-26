@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/NimrodHunter/natura-cura/precache-manifest.93b1528c5bfbddb4527b70dfab0f6f01.js"
+  "/NimrodHunter/natura-cura/precache-manifest.8344df3aac42ac6c4fd8c39b51bb3df5.js"
 );
 
 self.addEventListener('message', (event) => {
