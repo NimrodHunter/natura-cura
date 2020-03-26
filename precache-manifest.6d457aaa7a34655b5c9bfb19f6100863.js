@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d321f98a7dfe7a4b6ef26e8ebc8d19a9",
+    "revision": "937f55a6136126bbad496e780cb9cf9c",
     "url": "/NimrodHunter/natura-cura/index.html"
   },
   {
