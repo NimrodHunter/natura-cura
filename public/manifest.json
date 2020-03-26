@@ -1,5 +1,5 @@
 {
-  "short_name": "Anibal Catalán",
+  "short_name": "AnibalCatalán",
   "name": "Anibal Catalán",
   "icons": [
     {
@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://naturacura.cl/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
