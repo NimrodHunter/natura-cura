@@ -23,6 +23,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "styled-components": "^4.4.1",
+    "ts-node": "^8.8.1",
     "tslint": "^5.20.1",
     "tslint-react": "^4.1.0",
     "typescript": "^3.6.4"
@@ -31,7 +32,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "remove-build": "yarn run ts-node -T scripts/remove-build.ts",
+    "start-dev": "docker-compose up --build",
+    "close-dev": "docker-compose down -v --rmi local",
+    "start-prod": "docker-compose -f docker-compose-prod.yml up --build -d",
+    "close-prod": "docker-compose -f docker-compose-prod.yml down -v --rmi local",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -50,5 +57,6 @@
   },
   "devDependencies": {
     "tslint-config-prettier": "^1.18.0"
-  }
+  },
+  "homepage" : "https://github.com/NimrodHunter/natura-cura"
 }
