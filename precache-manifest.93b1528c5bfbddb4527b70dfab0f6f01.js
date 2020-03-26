@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "798fe554e19bb5994b9622c67d7cec1d",
+    "revision": "4b33830490a67a4b402e0037106bea52",
     "url": "/NimrodHunter/natura-cura/index.html"
   },
   {
-    "revision": "6eae72366f786154bee1",
+    "revision": "167d955ffd9f66c272cd",
     "url": "/NimrodHunter/natura-cura/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "6200124166600eefb3b8",
+    "revision": "e2cb8d4ef3761b4caab4",
     "url": "/NimrodHunter/natura-cura/static/css/main.5495d3b4.chunk.css"
   },
   {
-    "revision": "6eae72366f786154bee1",
-    "url": "/NimrodHunter/natura-cura/static/js/2.6a9f2815.chunk.js"
+    "revision": "167d955ffd9f66c272cd",
+    "url": "/NimrodHunter/natura-cura/static/js/2.b14b524e.chunk.js"
   },
   {
-    "revision": "6200124166600eefb3b8",
-    "url": "/NimrodHunter/natura-cura/static/js/main.14cf1fd5.chunk.js"
+    "revision": "e2cb8d4ef3761b4caab4",
+    "url": "/NimrodHunter/natura-cura/static/js/main.21e257d5.chunk.js"
   },
   {
     "revision": "863b82dc1be47bfba4a4",
