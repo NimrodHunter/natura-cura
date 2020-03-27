@@ -35,7 +35,7 @@ const Header = () => {
 
   const HeaderStyle = styled("header")`
     height: 10vh;
-    width: 100vW;
+    width: 100vw;
     background: transparent;
 
     svg.bars-svg {
@@ -61,7 +61,7 @@ const Header = () => {
     .title {
       height: 100%;
       font-family: 'Lato', sans-serif;
-      font-size: 1rem;
+      font-size: ${width <= 360 && navOpen ? '0.7rem' : '1rem' };
       letter-spacing: 0.1rem;
       color: #fff;
       display: flex;
@@ -171,7 +171,7 @@ const Header = () => {
     text-align: center;
 
     font-family: 'Lato', sans-serif;
-    font-size: 0.8rem;
+    font-size: ${width <= 360 && navOpen ? '0.5rem' : '0.8rem' };
     text-transform: uppercase;
     letter-spacing: 0.05rem;
 
@@ -189,7 +189,7 @@ const Header = () => {
     }
     
     svg.email-svg, svg.instagram-svg, svg.whatsapp-svg {
-      margin: 10px 10px 0px 10px;
+      margin: ${width <= 360 && navOpen ? '10px 2px 0px 2px' : '10px 10px 0px 10px' };
       fill: rgba(255,255,255,.4)
     }
 

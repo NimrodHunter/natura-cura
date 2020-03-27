@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Row, Col, Image } from 'react-bootstrap'
 import styled from 'styled-components'
 
 import backgroundImg from '../../../images/atardecer_copacabana.png';
@@ -8,35 +7,54 @@ import BackGroundImg, { IBackGroundImgProps } from '../BackGroundImg/BackGroundI
 import scout from '../../../images/scout.png'
 import progra from '../../../images/programando.jpeg'
 import masaje from '../../../images/sesion_kata_2.png'
+import ActivityCard, { IActivityCardProps } from './ActivityCard'
 
-const HomeStyle = styled("div")`
-  padding: 100px 5% 100px 5%;
 
+const TopStyle = styled("div")`
+  padding: 0 1rem 0 1rem;
+
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: center;
   text-align: center;
   text-rendering: optimizeLegibility;
-  font-family: futura-pt, sans-serif;
-  font-weight: lighter;
-  font-style: normal;
-  font-size: 30px;
-  line-height: 1.3em;
-  letter-spacing: 4px;
-  color: #fff;
-
+  
   .initialPhrase {
-    margin: 50px 0 0 0;
-    padding: 100px 0 0px;
+    margin-top: 35vh; 
+    padding-top: 18vh; 
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
     color: #d9d9d9;
     z-index: 10;
-    text-transform: uppercase;
   }
 
   .initialText {
-    margin: 100px 0 0 0;
-    padding: 50px 0 200px;
-    font-size: 70px;
-    line-height: 1.1em;
-    letter-spacing: 10px;
+    padding-top: 15vh;
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.08rem;
+    color: #fff;
     z-index: 10;    
+  }
+
+  @media (min-width: 600px) {
+    .initialPhrase {
+      font-size: 1.5rem;
+    }
+
+    .initialText {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1057px) {
+    .initialText {
+      padding-top: 25vh;
+      font-size: 3.5rem;
+    }
   }
 
   .middlePhrase {
@@ -91,71 +109,82 @@ const HomeStyle = styled("div")`
   `;
     
   const ActivitiesStyle = styled("div")`
-    padding: 100px 5% 100px 5%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-rendering: optimizeLegibility;
     background-color: #fff;
-    width: 100%;
 
-    .activitiesText {
-      padding: 25px 0 50px 0;
-      text-align: center;
-      text-rendering: optimizeLegibility;
-      font-family: futura-pt, sans-serif;
-      font-weight: lighter;
-      font-style: normal;
-      font-size: 40px;
+    .activitiesTitle {
+      padding: 3rem 0 0 0;
+      font-family: 'Spartan', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.08rem;
       line-height: 1.1em;
       text-transform: uppercase;
       color: #1f1f1f;
     }
-  `;
 
-  const ActivitiesTitle = styled("div")`
-    margin-top: 25px;
-    text-align: center;
-    width: 100%;
-    a, p {
-      text-align: center;
-      line-height: 1.1em;
-      font-family: futura-pt, sans-serif;
-      font-weight: lighter;
-      font-style: normal;
-      font-size: 30px;
-      color: rgba(31,31,31,.5);
+    @media (min-width: 488px) {
+      .activitiesTitle {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (min-width: 770px) {
+      .activitiesTitle {
+        font-size: 2rem;
+      }
+    }
+
+    @media (min-width: 1020px) {
+      .activitiesTitle {
+        font-size: 3rem;
+        padding: 3rem 0 2rem 0;
+      }
     }
   `;
-
-  const ActivitiesBody = styled("div")`
-    margin-top: 25px;
-    text-align: center;
-    font-family: europa, sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.1em;
-    color: #1f1f1f;
-    text-transform: uppercase;
-
-  `;
-
-  const MarginCol = {
-    margin: `0 15px 0 15px`
-  }
-
-  const MarginRow = {
-    margin: `0 100px 0 100px`
-  }
 
 const Home = () => {
   
   const [topImg, ] = useState<IBackGroundImgProps>({
     imgUrl: backgroundImg,
-    style: HomeStyle,
+    style: TopStyle,
   })
 
   const [middleImg, ] = useState<IBackGroundImgProps>({
     imgUrl: middleBackgroundImg,
-    style: HomeStyle,
+    style: TopStyle,
   })
+
+  const scoutCard: IActivityCardProps = {
+    img: scout,
+    title: "scout",
+    href: "https://www.instagram.com/tripanwenumapu/",
+    text: "si tienes entre 7 y 18 años y te gusta explorar la naturaleza, únete a nuestro grupo!",
+    imgHeight: '20%',
+    imgWidth: '20%'
+  }
+
+  const massageCard: IActivityCardProps = {
+    img: masaje,
+    title: "masajes",
+    href: "https://www.instagram.com/natura___cura/",
+    text: "los masajes contribuyen a restaurar el flujo natural del cuerpo, pruebalos!",
+    imgHeight: '20%',
+    imgWidth: '20%'
+  }
+
+  const devCard: IActivityCardProps = {
+    img: progra,
+    title: "programación",
+    href: "https://www.linkedin.com/in/anibal-eduardo-catalán-faúndez",
+    text: "alguna idea divertida que quieras programar?? escribeme!",
+    imgHeight: '20%',
+    imgWidth: '20%'
+  }
 
   return (
     <React.Fragment>
@@ -164,42 +193,10 @@ const Home = () => {
           <p className="initialText">Un puente entre Salud y Naturaleza.</p>
         </BackGroundImg >
         <ActivitiesStyle>
-          <p className="activitiesText">se tú mismo y disfruta el viaje</p>
-          <Row style={ MarginRow }>
-            <Col style={ MarginCol }>
-              <Row>
-                <a href="https://www.instagram.com/tripanwenumapu/"><Image src={ scout } width="100%" height="100%" /> </a>
-              </Row>   
-              <Row>       
-                <ActivitiesTitle><a href="https://www.instagram.com/tripanwenumapu/"> Scout</a></ActivitiesTitle>
-              </Row> 
-              <Row>
-                <ActivitiesBody><p>Si tienes entre 7 y 18 años y te gusta explorar la naturaleza, únete a nuestro grupo!</p></ActivitiesBody>
-              </Row>
-            </Col>
-            <Col style={ MarginCol }>
-              <Row>
-                <Image src={ masaje } width="100%" height="100%" />
-              </Row> 
-              <Row> 
-                <ActivitiesTitle><a href="https://www.instagram.com/natura___cura/">Masajes</a></ActivitiesTitle>
-              </Row> 
-              <Row>
-                <ActivitiesBody><p>Los masajes contribuyen a restaurar el flujo natural del cuerpo, Pruebalos!</p></ActivitiesBody>
-              </Row>
-            </Col>
-            <Col style={ MarginCol }>
-              <Row>
-                <a href="https://www.linkedin.com/in/anibal-eduardo-catalán-faúndez"><Image src={ progra } width="100%" height="100%" /> </a>
-              </Row>   
-              <Row>       
-                <ActivitiesTitle><a href="https://www.linkedin.com/in/anibal-eduardo-catalán-faúndez/"> Programación</a></ActivitiesTitle>
-              </Row> 
-              <Row>
-                <ActivitiesBody><p>Alguna idea divertida que quieras programar?? Escribeme!</p></ActivitiesBody>
-              </Row>
-            </Col>
-          </Row>
+          <p className="activitiesTitle">se tú mismo y disfruta el viaje</p>
+          <ActivityCard { ...scoutCard } />
+          <ActivityCard { ...massageCard } />
+          <ActivityCard { ...devCard } />
         </ActivitiesStyle>
         <BackGroundImg { ...middleImg } >
           <p className="middlePhrase">Natural Cura</p>

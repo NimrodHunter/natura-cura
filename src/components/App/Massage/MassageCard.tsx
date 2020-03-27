@@ -46,7 +46,6 @@ const MassageCard = (props: IMassageCardProps) => {
   `;
 
   return (
-    <React.Fragment>
       <MassageCardStyle>
             <Row>
                 <Col>
@@ -60,7 +59,6 @@ const MassageCard = (props: IMassageCardProps) => {
                 </Col>
             </Row>
       </MassageCardStyle>
-    </React.Fragment>
   );
 }
 
