@@ -71,6 +71,23 @@ const ActivityCard = (props: IActivityCardProps) => {
         font-size: 1rem;
       }
     }
+
+    @media (min-width: 1440px) {
+      align-self: flex-start;
+      flex-basis: 28vw;
+
+      img {
+        max-width: 28vw;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+  
+      p {
+        font-size: 0.8rem;
+      }
+    }
   `;
 
   return (

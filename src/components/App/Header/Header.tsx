@@ -34,40 +34,63 @@ const Header = () => {
   const [ navOpen, setNavOpen ] = useState(false);
 
   const HeaderStyle = styled("header")`
-    height: 10vh;
+    height: 4rem;
     width: 100vw;
+    min-width: 275px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: transparent;
 
-    svg.bars-svg {
-      display: block;
-      fill: #fff;    
+    li {
+      list-style-type: none;
+      margin: 0 10px 1.2rem 10px;
     }
 
-    @media (min-width: 770px) {
-      .responsive-toolbar {
-        display: block;
+    a {
+      color: #fff;
+      padding: 10px;
+
+      :hover {
+        color: #9c9999;
       }
 
-      svg.bars-svg {
-        display: none;
+      :focus {
+        color: #9c9999;
+        outline: thin dotted #fff;
+      }
+    }
+
+    .contact {
+      border: 2px solid #fff;
+      border-spacing: 15px;
+
+      :hover {
+        color: #181818;
+        background: #fff;
       }
 
-      svg.close-svg {
-        fill: #fff;
+      :focus {
+        background: #fff;
+        color: #181818;
+        outline: none;
       }
-
     }
 
     .title {
-      height: 100%;
       font-family: 'Lato', sans-serif;
-      font-size: ${width <= 360 && navOpen ? '0.7rem' : '1rem' };
+      font-size: 0.7rem;
       letter-spacing: 0.1rem;
       color: #fff;
-      display: flex;
-      padding-inline-start: 5%;
-      float: left;
-      align-items: center;
+      padding-inline-start: 3%;
+
+      @media (min-width: 410px) {
+        font-size: 1rem;  
+      }
+
+      @media (min-width: 480px) {
+        font-size: 1.2rem;  
+      }
 
       a {
         color: #fff;
@@ -84,29 +107,113 @@ const Header = () => {
       }
     }
 
-    .openBars {
-      display: ${width <= 770 && !navOpen ? 'block' : 'none'};
-      transition: display 200ms ease;
-      padding: 0;
-      padding-inline-end: 3%;
-      height: 100%;
+    .closeCross {
+      display: ${width < 770 && navOpen ? 'block' : 'none'};
+      position: fixed;
+      right: 34vw
+      top: 1.4rem;
       float: right;
       background: transparent;
       border: none;
+      fill: #fff;
+      padding: 0;
+    }
+
+    .sideBar {
+      display: ${width < 770 && navOpen ? 'block' : 'none'};
+      transition: display 200ms ease;
+      overflow-y: hidden;
+      height: 100vh;
+      width: 35vw;  
+      float: right;
+      background: #201a16;
+      z-index: 200;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      text-align: center;
+
+      font-family: 'Lato', sans-serif;
+      font-size: ${width <= 410 && navOpen ? '0.5rem' : '0.8rem' };
+      text-transform: uppercase;
+      letter-spacing: 0.08rem;
+      
+      svg.email-svg, svg.instagram-svg, svg.whatsapp-svg {
+        margin: ${width <= 410 && navOpen ? '10px 2px 0px 2px' : '10px 10px 0px 10px' };
+        fill: rgba(255,255,255,.4)
+      }
+  
+      svg.email-svg:hover, svg.instagram-svg:hover, svg.whatsapp-svg:hover {
+        fill: #fff;
+      }
+  
+      ul {
+        padding-top: 6vh;
+        padding-inline-start: 0;
+
+      }
+
+      @media (min-width: 360px) {
+        ul {
+          padding-top: 5vh;
+        } 
+      }
+
+      @media (min-width: 375px) and (min-height: 812px) {
+        ul {
+          padding-top: 4vh;
+        } 
+      }
+
+      @media (min-width: 411px) {
+        ul {
+          padding-top: 4vh;
+        } 
+      }
+
+      @media (min-width: 768px) {
+        ul {
+          padding-top: 3vh;
+        } 
+      }
+
+
+
+      .social {
+        a {
+          padding: 10px 1px 0 1px;
+        }
+      }
+    }
+
+    .openBars {
+      display: ${width <= 770 && !navOpen ? 'block' : 'none'};
+      transition: display 200ms ease;
+      background: transparent;
+      border: none;
+      padding: 0;
+      fill: #fff;
+      padding-inline-end: 2%;
+
+      @media (min-width: 770px) {
+        display: none;  
+      }
     }
 
     .menu {
       display: ${width >= 770 ? 'block' : 'none'};
       transition: display 200ms ease;
-      height: 100%;
-      width: 100%;
-      align-items: center;
 
       font-family: 'Lato', sans-serif;
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.08rem;
-      padding-inline-end: 5%;
+      padding-inline-end: 3%;
+
+      @media (min-width: 770px) {
+          display: block;  
+      }
 
       ul {
         display: flex;
@@ -116,125 +223,11 @@ const Header = () => {
         height: 100%;
         align-items: center;
         float: right;
-
+        
         li {
-          list-style-type: none;
-          margin: 0 0 0 1rem;
+          margin: 0 10px 0 10px;
         }
-
-        a {
-          color: #fff;
-          padding: 10px 10px 10px 10px;
-
-          :hover {
-            color: #9c9999;
-          }
-
-          :focus {
-            color: #9c9999;
-            outline: thin dotted #fff;
-          }
-        }
-
-        .contact {
-          border: 2px solid #fff;
-          border-spacing: 15px;
-
-          :hover {
-            color: #181818;
-            background: #fff;
-          }
-
-          :focus {
-            background: #fff;
-            color: #181818;
-            outline: none;
-          }
-        }
-      }
-    }
-  `;
-  
-  const SideBarStyle = styled("div")`
-    display: ${width < 770 && navOpen ? 'block' : 'none'};
-    transition: display 200ms ease;
-    overflow-y: hidden;
-    height: 100vh;
-    width: 35vw;  
-    float: right;
-    background: #201a16;
-    z-index: 200;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    text-align: center;
-
-    font-family: 'Lato', sans-serif;
-    font-size: ${width <= 360 && navOpen ? '0.5rem' : '0.8rem' };
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
-
-    .closeCross {
-      display: ${width < 770 && navOpen ? 'block' : 'none'};
-      transition: display 200ms ease;
-      position: fixed;
-      right: 34vw;
-      float: right;
-      background: transparent;
-      border: none;
-      fill: #fff;
-      padding: 0;
-      height: 10vh;
-    }
-    
-    svg.email-svg, svg.instagram-svg, svg.whatsapp-svg {
-      margin: ${width <= 360 && navOpen ? '10px 2px 0px 2px' : '10px 10px 0px 10px' };
-      fill: rgba(255,255,255,.4)
-    }
-
-    svg.email-svg:hover, svg.instagram-svg:hover, svg.whatsapp-svg:hover {
-      fill: #fff;
-    }
-
-    ul {
-      padding-top: 3.3vh;
-      margin-block-start: 0;
-      padding-inline-start: 0;
-
-      li {
-        list-style-type: none;
-        margin: 0 10px 1.2rem 10px;
-      }
-
-      a {
-        color: #fff;
-        padding: 10px;
-
-        :hover {
-          color: #9c9999;
-        }
-
-        :focus {
-          color: #9c9999;
-          outline: thin dotted #fff;
-        }
-      }
-
-      .contact {
-        border: 2px solid #fff;
-        border-spacing: 15px;
-
-        :hover {
-          color: #181818;
-          background: #fff;
-        }
-
-        :focus {
-          background: #fff;
-          color: #181818;
-          outline: none;
-        }
+        
       }
     }
   `;
@@ -247,24 +240,10 @@ const Header = () => {
     ]
   )
 
+  console.log(navOpen)
+  console.log(width)
+
   return (
-    <React.Fragment>
-      <SideBarStyle ref={ myRef } >
-        <button className="closeCross" onClick = { () => setNavOpen(!navOpen) }><CloseSVG width="33.33px" height="22.227px" /></button>
-        <ul>
-          {nav.sections.map(section => {
-            return (
-              <li key={ section }><Link to ={ `/${ section }` } key={ section } onClick = { () => setNavOpen(!navOpen) } >{ section.toUpperCase() }</Link></li>
-            )
-          })}
-          <li key={ nav.contact }><Link to ={ `/${ nav.contact }` } key={ nav.contact } className="contact"  onClick = { () => setNavOpen(!navOpen) }>{ nav.contact.toUpperCase() }</Link></li>
-        </ul>
-        <div>
-          <a href={ media[0].url } className={ media[0].name } ><WhatsAppSVG width="15%" height="15%"/></a>
-          <a href={ media[1].url } className={ media[1].name } ><InstagramSVG width="15%" height="15%"/></a>
-          <a href={ media[2].url } className={ media[2].name } ><EmailSVG width="15%" height="15%"/></a>
-        </div>
-      </SideBarStyle>
       <HeaderStyle ref={ myRef }>
         <Link to ={ `/` } key={ nav.title } className="title">{ nav.title.toUpperCase() }</Link>
         <button className="openBars" onClick = { () => setNavOpen(!navOpen) }><BarsSVG width="50px" height="33.34px" /></button>
@@ -278,8 +257,23 @@ const Header = () => {
             <li key={ nav.contact } ><Link to ={ `/${ nav.contact }` } key={ nav.contact } className="contact">{ nav.contact.toUpperCase() }</Link></li>
           </ul> 
         </nav>
+        <div className="sideBar">
+          <button className="closeCross" onClick = { () => setNavOpen(!navOpen) }><CloseSVG width="33.33px" height="22.227px" /></button>
+          <ul>
+            {nav.sections.map(section => {
+              return (
+                <li key={ section }><Link to ={ `/${ section }` } key={ section } onClick = { () => setNavOpen(!navOpen) } >{ section.toUpperCase() }</Link></li>
+              )
+            })}
+            <li key={ nav.contact }><Link to ={ `/${ nav.contact }` } key={ nav.contact } className="contact"  onClick = { () => setNavOpen(!navOpen) }>{ nav.contact.toUpperCase() }</Link></li>
+          </ul>
+          <div className="social">
+            <a href={ media[0].url } className={ media[0].name } ><WhatsAppSVG width="15%" height="15%"/></a>
+            <a href={ media[1].url } className={ media[1].name } ><InstagramSVG width="15%" height="15%"/></a>
+            <a href={ media[2].url } className={ media[2].name } ><EmailSVG width="15%" height="15%"/></a>
+          </div>
+        </div>
       </HeaderStyle > 
-    </React.Fragment>
   );
 } 
 

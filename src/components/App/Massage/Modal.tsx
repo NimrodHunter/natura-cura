@@ -32,8 +32,8 @@ const ModalStyle = styled("div")`
         top: 50%;
         left: 50%
         transform: translate(-50%, -50%);
-        height: 90%;
-        width: 60%;
+        height: 90vh;
+        width: 60vw;
         background-color: white;
         box-shadow: 0 0 10px rgba(0,0,0,0.25);
         z-index: 101;
