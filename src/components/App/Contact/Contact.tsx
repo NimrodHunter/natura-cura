@@ -21,18 +21,11 @@ const ContactStyle = styled("div")`
     }
 
     .initialText {
-      flex-basis: 60%;
       font-family: 'Spartan', sans-serif;
-      font-size: 3rem;
+      font-size: 2rem;
       letter-spacing: 0.08rem;
       color: #fff;
       z-index: 10;
-    }
-
-    @media (min-width: 375px) {
-      .initialText {
-        flex-basis: 30%;
-      }
     }
 
     @media (min-width: 768px) {

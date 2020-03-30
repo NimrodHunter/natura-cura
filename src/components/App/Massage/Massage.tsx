@@ -159,7 +159,7 @@ function Massage() {
       <BackGroundImg { ...topImg } >
         <p className="initialText">Opciones de masajes</p>
         <p style= { pStyle }>
-          <CertificateBtnStyle><a href='../../../../public/certificado-masaje.pdf' download={ true }>Certificado</a></CertificateBtnStyle>
+          <CertificateBtnStyle><a href='https://drive.google.com/file/d/1MX8j07hNqhyW8meFyVeMY5taeWrIFKWp/view?usp=sharing' download={ true }>Certificado</a></CertificateBtnStyle>
         </p>
       </BackGroundImg >
       <MassageStyle>
