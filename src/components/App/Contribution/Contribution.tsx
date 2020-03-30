@@ -1,85 +1,114 @@
 import React, { useState } from "react";
 
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-import BancoEstadoSVG from '../SVG/BancoEstadoSVG'
-import BitcoinSVG from '../SVG/BitcoinSVG'
-import EmailSVG from '../SVG/EmailSVG'
-import EthereumSVG from '../SVG/EthereumSVG'
-import InstagramSVG from '../SVG/InstagramSVG'
-import WhatsappSVG from '../SVG/WhatsAppSVG'
+import EmailSVG from '../SVG/EmailSVG';
+import InstagramSVG from '../SVG/InstagramSVG';
+import WhatsappSVG from '../SVG/WhatsAppSVG';
+
+import ContributionResponsibe from './ContibutionResponsive'
 
 const ContributionStyle = styled("div")`
-  color: #1f1f1f;
-  background-color: #f0f0f0;
-  width: 100%;
-  max-width: 100%;
+  padding: 7%;
+  background: #f0f0f0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  font-size: 20px;
-  padding: 30px;
-  margin: 0 0 17px 0;
-  -moz-box-sizing: border-box;
-  font-family: futura-pt, sans-serif;
-  text-transform: none;
-  letter-spacing: 0px;
-  font-weight: 300;
-  font-style: normal;
+  height: 100vh;
   text-rendering: optimizeLegibility;
 
+  p {
+    margin: 0
+  }
+
   .contributionTitle {
-    padding: 30px;
-  }
-
-  .contributionOption {
-    padding: 10px;
-    font-size: 15px;
-    text-align: justify;
-    margin: 0 auto;
-    width: 50em;
-  }
-  
-  svg.banco_estado-svg, svg.bitcoin-svg {
-    margin: 0px 15px 0px 0px;
-  }
-
-  svg.ethereum-svg {
-    margin: 0px 23px 0px 7px;
-  }
-  img.ethereum {
-    padding-left: 10px;
-    padding-right: 15px;
-  }
-
-  a {
+    flex-basis: 20%;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
     color: #1f1f1f;
   }
 
-  a:hover {
-    color: rgba(31,31,31,.5);
+  @media (min-width: 590px) {
+    .contributionTitle {
+      padding-bottom: 5%;
+      font-size: 1.5rem;
+    } 
+  }
+
+  @media (min-width: 760px) {
+    .contributionTitle {
+      font-size: 1.8rem;
+    } 
+  }
+
+  @media only screen and (min-width: 1020px) {
+    .contributionTitle {
+      padding: 5% 0 5% 0;
+      font-size: 2rem;
+    }
+  }
+
+  @media only screen and (min-width: 1430px) {
+    padding-top: 10%;
+    .contributionTitle {
+      padding-top: 0%;
+      font-size: 2.5rem;
+    }
   }
 `;
 
 const MediaStyle = styled("div")`
-  text-decoration: none !important;
+  display: flex;
   text-align: center;
-  display: block;
-  margin: 50px 0px 30px 0px;
-  
-  svg.email-svg, svg.instagram-svg, svg.whatsapp-svg {
-    margin: 0px 10px 0px 10px;
+  justify-content: center;
+
+  a {
+    padding: 0;
   }
 
   svg.email-svg:hover, svg.instagram-svg:hover, svg.whatsapp-svg:hover {
     fill: rgba(31,31,31,.5);
   }
 
-`;
+  .instagram {
+    margin-right: 4%;
+  }
 
-interface IAccount { 
-  name: string
-  number: string
-  link: string | undefined
-}
+  @media only screen and (min-width: 413px) {
+    padding-top: 5%;
+
+    a {
+      width: 165px;
+    }
+
+    .instagram {
+      margin: 0 0% 0 0%;
+    }
+
+    svg.whatsapp-svg {
+      width: 44%;
+      height: 30%;
+    }
+    
+    svg.instagram-svg {
+      width: 106%;
+      height: 30%;
+    }
+
+    svg.email-svg {
+      width: 38%;
+      height: 30%;
+    }
+  }
+
+  
+  } 
+
+`;
 
 interface IMedia { 
   name: string
@@ -87,13 +116,6 @@ interface IMedia {
 }
 
 const Contribution = () => {
-  const [accounts, ] = useState<Array<IAccount>>(
-    [
-      { name: "Banco Estado", number: "17697388", link: undefined },
-      { name: "Bitcoin", number: "1M3Kjy6NHuvdEGWaBkwjDQehVYBtVv49HY", link: "https://live.blockcypher.com/btc/address/1M3Kjy6NHuvdEGWaBkwjDQehVYBtVv49HY" },
-      { name: "Ethereum", number: "0x3771eEf3E76329ac4c17962A158A895545795C0d", link: "https://etherscan.io/address/0x3771eef3e76329ac4c17962a158a895545795c0d"} 
-    ]
-  )
 
   const [media, ] = useState<Array<IMedia>>(
     [
@@ -107,13 +129,11 @@ const Contribution = () => {
     return (
       <ContributionStyle>
         <div className="contributionTitle">AYÚDAME A CONTINUAR CON ESTE PROYECTO</div>
-        <p className="contributionOption"><BancoEstadoSVG width="6%" height="6%"/>Cuenta Vista { accounts[0].name } Número: { accounts[0].number}</p>
-        <p className="contributionOption"><BitcoinSVG width="6%" height="6%"/>Dirección { accounts[1].name }: <a href={accounts[1].link}>{ accounts[1].number}</a></p>
-        <p className="contributionOption"><EthereumSVG width="4%" height="4%"/>Dirección { accounts[2].name }: <a href={accounts[2].link}>{ accounts[2].number}</a></p>
+        <ContributionResponsibe/>
           <MediaStyle >
-            <a href={ media[0].url } className={ media[0].name }><WhatsappSVG width="2%" height="2%"/></a>
-            <a href={ media[1].url } className={ media[1].name }><InstagramSVG width="2%" height="2%"/></a>
-            <a href={ media[2].url } className={ media[2].name }><EmailSVG width="2%" height="2%"/></a>
+            <a href={ media[0].url } className={ media[0].name }><WhatsappSVG width= '50'height= '55%'/></a>
+            <a href={ media[1].url } className={ media[1].name }><InstagramSVG width= '50' height= '55%'/></a>
+            <a href={ media[2].url } className={ media[2].name }><EmailSVG width= '30' height='55%'/></a>
           </MediaStyle>
       </ContributionStyle>
     );

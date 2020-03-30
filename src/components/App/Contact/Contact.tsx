@@ -7,24 +7,44 @@ import BackGroundImg, { IBackGroundImgProps } from '../BackGroundImg/BackGroundI
 import Engage from './Engage'
 
 const ContactStyle = styled("div")`
-    height: 100%;
-    width: 100%;
-    padding-bottom: 200px;
+    padding: 0 7% 0 7%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    text-rendering: optimizeLegibility;
+
+    p {
+      margin: 0
+    }
 
     .initialText {
-      margin: 0 10% 0 10%;
-      padding: 250px 0 50px 0;
-      text-align: center;
-      text-rendering: optimizeLegibility;
-      font-family: futura-pt, sans-serif;
-      font-weight: lighter;
-      font-style: normal;
-      font-size: 100px;
-      line-height: 1.1em;
-      letter-spacing: 10px;
-      text-transform: none;
+      flex-basis: 60%;
+      font-family: 'Spartan', sans-serif;
+      font-size: 3rem;
+      letter-spacing: 0.08rem;
       color: #fff;
       z-index: 10;
+    }
+
+    @media (min-width: 375px) {
+      .initialText {
+        flex-basis: 30%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .initialText {
+        font-size: 4rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .initialText {
+        font-size: 5rem;
+      }
     }
 `;
 

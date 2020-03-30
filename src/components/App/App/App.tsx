@@ -11,20 +11,19 @@ import Massage from '../Massage/Massage'
 import Contact from '../Contact/Contact'
 
 const GlobalStyle = createGlobalStyle`
-  height: 100%;
   
-  html, .container, #root {
+  html, #root, body  {
     height: 100%;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   body {
-    height: 100%;
-    width: 100%;
+    display: block;
     margin: 0;
-    font-family: "futura-pt", "europa", sans-serif;
+    font-family: sans-serif;
     background: #201a16;
     color: #fff;
-    position: absolute !important;
   }
 
   *, ::after, ::before {

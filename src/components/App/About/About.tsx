@@ -6,77 +6,121 @@ import BackGroundImg, { IBackGroundImgProps } from '../BackGroundImg/BackGroundI
 
 
 const AboutStyle = styled("div")`
-    width: 100%;
-    padding-bottom: 200px;
+    padding: 0 7% 0 7%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    text-rendering: optimizeLegibility;
+
+    p {
+      margin: 0
+    }
+    
 
     .initialText {
-      margin: 0 10% 0 10%;
-      padding: 250px 0 50px 0;
-      text-align: center;
-      text-rendering: optimizeLegibility;
-      font-family: futura-pt, sans-serif;
-      font-weight: lighter;
-      font-style: normal;
-      font-size: 100px;
-      line-height: 1.1em;
-      letter-spacing: 10px;
-      text-transform: none;
+      flex-basis: 20%;
+      font-family: 'Lato', sans-serif;
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
       color: #fff;
       z-index: 10;
     }
 
     .secondText {
-      margin: 0 10% 0 10%;
-      padding: 0 0 50px 0;
-      text-align: center;
-      text-rendering: optimizeLegibility;
-      font-family: futura-pt, sans-serif;
-      font-weight: lighter;
-      font-style: normal;
-      font-size: 30px;
-      line-height: 1.1em;
-      letter-spacing: 10px;
-      text-transform: none;
+      font-family: 'Spartan', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.08rem;
       color: #d9d9d9;
-      text-transform: uppercase;
       z-index: 10;
+    }
+
+    @media (min-width: 411px) {
+      .initialText {
+        font-size: 4rem;
+      }
+  
+      .secondText {
+        font-size: 2rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .initialText {
+        font-size: 6rem;
+        letter-spacing: 1rem;
+      }
+  
+      .secondText {
+        font-size: 4rem;
+      }
     }
 `;
 
 const AboutMessageStyle = styled("div")`
-    width: 100%;
+    padding: 0 7% 0 7%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    text-rendering: optimizeLegibility;
     background: #fff;
 
     .initialText {
-      margin: 0 20% 0 20%;
-      padding: 100px 0 50px 0;
-      text-align: center;
-      text-rendering: optimizeLegibility;
-      font-family: futura-pt, sans-serif;
-      font-weight: lighter;
-      font-style: normal;
-      font-size: 40px;
-      line-height: 1.0em;
-      letter-spacing: 2px;
-      text-transform: none;
+      flex-basis: 40%;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
       color: #1f1f1f;
       z-index: 10;
     }
 
     .secondText {
-      margin: 0 30% 0 30%;
-      padding: 0 0 100px 0;
-      text-align: center;
-      text-rendering: optimizeLegibility;
-      font-family: futura-pt, sans-serif;
-      font-weight: lighter;
-      font-style: normal;
-      font-size: 20px;
-      line-height: 1.1em;
-      letter-spacing: 0.5px;
-      text-transform: none;
+      padding: 0 3% 0 3%;
+      font-family: 'Spartan', sans-serif;
+      font-size: 0.4rem;
+      letter-spacing: 0.08rem;
       color: rgba(31,31,31,.5);
       z-index: 10;
+    }
+
+    @media (min-width: 411px) {
+      .initialText {
+        font-size: 0.6rem;
+      }
+  
+      .secondText {
+        font-size: 0.5rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .initialText {
+        flex-basis: 30%;
+        font-size: 0.8rem;
+      }
+  
+      .secondText {
+        font-size: 0.7rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .initialText {
+        flex-basis: 30%;
+        font-size: 1.1rem;
+      }
+  
+      .secondText {
+        padding: 0 6% 0 6%;
+        font-size: 0.9rem;
+      }
     }
 `;
 
