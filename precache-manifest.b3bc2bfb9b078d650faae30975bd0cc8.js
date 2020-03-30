@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "16ae0b86832616e8c25dec7116c17c62",
+    "revision": "8c5ec81ebfe419d1d2c541ca2ddbff7d",
     "url": "/index.html"
   },
   {
-    "revision": "71e6cfdc899ce126d904",
+    "revision": "5dac3091af8a3a78078c",
     "url": "/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "19b0fe4715cb86d9bff1",
+    "revision": "4e4f42bf6564ede24137",
     "url": "/static/css/main.5495d3b4.chunk.css"
   },
   {
-    "revision": "71e6cfdc899ce126d904",
-    "url": "/static/js/2.d09dff3f.chunk.js"
+    "revision": "5dac3091af8a3a78078c",
+    "url": "/static/js/2.7dfaf84d.chunk.js"
   },
   {
-    "revision": "19b0fe4715cb86d9bff1",
-    "url": "/static/js/main.6c7e02cc.chunk.js"
+    "revision": "4e4f42bf6564ede24137",
+    "url": "/static/js/main.0f76b9f3.chunk.js"
   },
   {
     "revision": "8d9355fe79e73f35f50f",
@@ -34,10 +34,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "81a8a66a603b9ffc170e85dc4ad0f0e6",
     "url": "/static/media/bahia_isla_del_sol.81a8a66a.png"
-  },
-  {
-    "revision": "e0f9135a1df137345731f25234a7cfae",
-    "url": "/static/media/certificado.e0f9135a.png"
   },
   {
     "revision": "b954ce0cb4807da8dfe6883ef283f17f",
