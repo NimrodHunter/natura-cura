@@ -1,44 +1,70 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import styled from 'styled-components'
-import { Image } from 'react-bootstrap'
 
 import Engage from '../Contact/Engage'
-import Modal from './Modal';
+
 import backgroundImg from '../../../images/machupichu.png';
 import BackGroundImg, { IBackGroundImgProps } from '../BackGroundImg/BackGroundImg';
 import MassageCard, { IMassageCardProps }  from './MassageCard';
 import relaxPhoto from '../../../images/sesion_kata_1.png'
-import certificado from '../../../images/certificado.png'
 
 
 const MassageImgStyle = styled("div")`
-  height: 100%;
-  width: 100%;
-  padding-bottom: 200px;
+    padding: 0 7% 0 7%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    text-rendering: optimizeLegibility;
+
+    p {
+      margin: 0
+    }
 
   .initialText {
-    margin: 0 10% 0 10%;
-    padding: 250px 0 50px 0;
-    text-align: center;
-    text-rendering: optimizeLegibility;
-    font-family: futura-pt, sans-serif;
-    font-weight: lighter;
-    font-style: normal;
-    font-size: 80px;
-    line-height: 1.1em;
-    letter-spacing: 10px;
-    text-transform: none;
+    flex-basis: 30%;
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
     color: #fff;
     z-index: 10;
+  }
+
+  @media (min-width: 375px) {
+    .initialText {
+      flex-basis: 45%;
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .initialText {
+      flex-basis: 40%;
+      font-size: 5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .initialText {
+      flex-basis: 30%;
+      font-size: 6rem;
+    }
   }
 `;
 
 
 const MassageStyle = styled("div")`
-    background: #fff;
-    padding: 5% 0 5% 10%;
+    padding: 15% 7% 10% 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-  }
+    text-rendering: optimizeLegibility;
+    background: #fff;
 `;
 
 const CertificateBtnStyle = styled("button")`
@@ -78,7 +104,7 @@ const CertificateBtnStyle = styled("button")`
 
       :focus {
         color: #181818;
-        outline: thin dotted;
+        outline: none;
       }
     }
   }
@@ -128,25 +154,14 @@ function Massage() {
     ]
   )
 
-  const modalRef = useRef(null);
-
-  const openCertificate = () => {
-    // @ts-ignore: Object is possibly 'null'.
-    modalRef.current.openModal()
-
-  }
-  
   return (
-    <React.Fragment>
+    <div >
       <BackGroundImg { ...topImg } >
         <p className="initialText">Opciones de masajes</p>
         <p style= { pStyle }>
-        <CertificateBtnStyle onClick = { openCertificate }>Certificado</CertificateBtnStyle>
+          <CertificateBtnStyle><a href='../../../../public/certificado-masaje.pdf' download={ true }>Certificado</a></CertificateBtnStyle>
         </p>
       </BackGroundImg >
-      <Modal ref = { modalRef}>
-        <Image src={ certificado } width="100%" height="100%" />
-      </Modal >
       <MassageStyle>
       { cards.map(card => {
         return (
@@ -155,7 +170,7 @@ function Massage() {
       })}
       </MassageStyle>
       <Engage/>
-    </React.Fragment>
+    </div>
   );
 }
 

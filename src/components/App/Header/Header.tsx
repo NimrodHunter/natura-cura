@@ -240,9 +240,6 @@ const Header = () => {
     ]
   )
 
-  console.log(navOpen)
-  console.log(width)
-
   return (
       <HeaderStyle ref={ myRef }>
         <Link to ={ `/` } key={ nav.title } className="title">{ nav.title.toUpperCase() }</Link>

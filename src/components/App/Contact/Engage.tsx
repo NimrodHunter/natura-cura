@@ -8,10 +8,12 @@ import MapsSVG from '../SVG/MapsSVG'
 
 
 const MediaStyle = styled("div")`
-  text-decoration: none !important;
+  padding: 15%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  display: block;
-  padding: 100px 0px 100px 0px;
   background-color: #201a16;;
   
   svg.maps-svg {
@@ -19,7 +21,6 @@ const MediaStyle = styled("div")`
   }
 
   svg.email-svg, svg.instagram-svg, svg.whatsapp-svg, svg.maps-svg {
-    margin: 0px 30px 0px 30px;
     fill: rgba(255,255,255,.4)
   }
 
@@ -28,34 +29,78 @@ const MediaStyle = styled("div")`
   }
 
   .socialText {
-    margin: 0 10% 0 10%;
-    padding: 0px 0 60px 0;
-    text-align: center;
-    text-rendering: optimizeLegibility;
-    font-family: futura-pt, sans-serif;
-    font-weight: lighter;
-    font-style: normal;
-    font-size: 70px;
-    line-height: 1.1em;
-    letter-spacing: 10px;
-    color: #d9d9d9;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.08rem;
     text-transform: uppercase;
+    padding: 0 0 0.2rem 0;
+    font-size: 1.6rem;
+    color: #d9d9d9;
   }
 
   .addressText {
-    margin: 0 10% 0 10%;
-    padding: 80px 0 60px 0;
-    text-align: center;
-    text-rendering: optimizeLegibility;
-    font-family: futura-pt, sans-serif;
-    font-weight: lighter;
-    font-style: normal;
-    font-size: 40px;
-    line-height: 1.1em;
-    letter-spacing: 10px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.08rem;
     text-transform: uppercase;
+    padding: 1rem 0 0.2rem 0;
+    font-size: 1.3rem;;
     color: #d9d9d9;
   }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    .socialText {
+      padding: 0 0 1rem 0;
+      font-size: 3rem;
+    }
+
+    .addressText {
+      padding: 1rem 0 1rem 0;
+      font-size: 2rem;;
+    }
+  }
+
+  @media (min-width: 1150px) {
+    .socialText {
+      padding: 0 0 1.5rem 0;
+      font-size: 4rem;
+    }
+
+    .addressText {
+      padding: 1rem 0 1.5rem 0;
+      font-size: 3rem;;
+    }
+
+    svg.maps-svg {
+      width: 20%;
+    }
+  
+    svg.email-svg, svg.instagram-svg, svg.whatsapp-svg{
+      width: 50%;
+    }
+
+    svg.email-svg{
+      width: 35%;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    svg.maps-svg {
+      width: 15%;
+    }
+  }
+
+  @media (min-width: 1650px) {
+    svg.maps-svg {
+      width: 13%;
+    }
+  }
+
+
 `;
 
 interface IMedia { 
@@ -77,11 +122,13 @@ const Engage = () => {
   return (
       <MediaStyle>
         <p className="socialText">reservas</p>
-        <a href={ media[0].url } className={ media[0].name }><WhatsAppSVG width="4%" height="4%"/></a>
-        <a href={ media[1].url } className={ media[1].name }><InstagramSVG width="4%" height="4%"/></a>
-        <a href={ media[2].url } className={ media[2].name }><EmailSVG width="4%" height="4%"/></a>
+        <div className="social">
+          <a href={ media[0].url } className={ media[0].name }><WhatsAppSVG width="60%" height="60%"/></a>
+          <a href={ media[1].url } className={ media[1].name }><InstagramSVG width="60%" height="60%"/></a>
+          <a href={ media[2].url } className={ media[2].name }><EmailSVG width="44%" height="60%"/></a>
+        </div>  
         <p className="addressText">dirección</p>
-        <a href={ media[3].url } className={ media[3].name }><MapsSVG width="9%" height="9%"/></a>
+        <a href={ media[3].url } className={ media[3].name }><MapsSVG width="23%" height="23%"/></a>
       </MediaStyle>
   );
 }
