@@ -242,16 +242,16 @@ const Header = () => {
 
   return (
       <HeaderStyle ref={ myRef }>
-        <Link to ={ `/` } key={ nav.title } className="title">{ nav.title.toUpperCase() }</Link>
+        <Link to ={ process.env.PUBLIC_URL + `/` } key={ nav.title } className="title">{ nav.title.toUpperCase() }</Link>
         <button className="openBars" onClick = { () => setNavOpen(!navOpen) }><BarsSVG width="50px" height="33.34px" /></button>
         <nav className="menu">
           <ul>      
             {nav.sections.map(section => {
               return (
-                <li key={ section }><Link to ={ `/${ section }` } key={ section }>{ section.toUpperCase() }</Link></li>
+                <li key={ section }><Link to ={ process.env.PUBLIC_URL + `/${ section }` } key={ section }>{ section.toUpperCase() }</Link></li>
               )
             })}
-            <li key={ nav.contact } ><Link to ={ `/${ nav.contact }` } key={ nav.contact } className="contact">{ nav.contact.toUpperCase() }</Link></li>
+            <li key={ nav.contact } ><Link to ={ process.env.PUBLIC_URL + `/${ nav.contact }` } key={ nav.contact } className="contact">{ nav.contact.toUpperCase() }</Link></li>
           </ul> 
         </nav>
         <div className="sideBar">
@@ -259,10 +259,10 @@ const Header = () => {
           <ul>
             {nav.sections.map(section => {
               return (
-                <li key={ section }><Link to ={ `/${ section }` } key={ section } onClick = { () => setNavOpen(!navOpen) } >{ section.toUpperCase() }</Link></li>
+                <li key={ section }><Link to ={ process.env.PUBLIC_URL + `/${ section }` } key={ section } onClick = { () => setNavOpen(!navOpen) } >{ section.toUpperCase() }</Link></li>
               )
             })}
-            <li key={ nav.contact }><Link to ={ `/${ nav.contact }` } key={ nav.contact } className="contact"  onClick = { () => setNavOpen(!navOpen) }>{ nav.contact.toUpperCase() }</Link></li>
+            <li key={ nav.contact }><Link to ={ process.env.PUBLIC_URL + `/${ nav.contact }` } key={ nav.contact } className="contact"  onClick = { () => setNavOpen(!navOpen) }>{ nav.contact.toUpperCase() }</Link></li>
           </ul>
           <div className="social">
             <a href={ media[0].url } className={ media[0].name } ><WhatsAppSVG width="15%" height="15%"/></a>

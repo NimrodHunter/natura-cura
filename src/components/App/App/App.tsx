@@ -42,14 +42,14 @@ const App = () => {
   return (
     <React.Fragment>
       <GlobalStyle />    
-        <Router>
+        <Router basename= {process.env.PUBLIC_URL }>
           <Header/>
             <Layout>
               <Switch>
-                <Route exact={ true } path="/" component={ Home } />                        
-                <Route path="/yo" component={ About } />
-                <Route path="/masajes" component={ Massage } />
-                <Route path="/contacto" component={ Contact } />
+                <Route exact={ true } path= "/" component={ Home } />                        
+                <Route path= "/yo" component={ About } />
+                <Route path= "/masajes" component={ Massage } />
+                <Route path= "/contacto" component={ Contact } />
                 <Route component={ Home } />
               </Switch>
             </Layout>
