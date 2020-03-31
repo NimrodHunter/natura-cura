@@ -1,7 +1,7 @@
 {
   "name": "natura-cura",
   "version": "0.1.0",
-  "description": "Web personal sanador Anibal Catalán",
+  "description": "Healer Anibal Catalán Website",
   "repository": "https://github.com/NimrodHunter/natura-cura",
   "license": "MIT",
   "dependencies": {
@@ -10,15 +10,15 @@
     "@types/lodash": "^4.14.149",
     "@types/node": "^12.7.12",
     "@types/react": "^16.9.5",
-    "@types/react-bootstrap": "^0.32.20",
     "@types/react-dom": "^16.9.1",
+    "@types/react-pdf": "^4.0.3",
     "@types/react-router": "^5.1.3",
     "@types/react-router-dom": "^5.1.3",
     "@types/styled-components": "^4.4.1",
     "bootstrap": "^4.4.1",
     "react": "^16.13.0",
-    "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.10.2",
+    "react-pdf": "^4.1.0",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
@@ -34,11 +34,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "remove-build": "yarn run ts-node -T scripts/remove-build.ts",
+    "deploy": "gh-pages -d build",
     "start-dev": "docker-compose up --build",
     "close-dev": "docker-compose down -v --rmi local",
     "start-prod": "docker-compose -f docker-compose-prod.yml up --build -d",
-    "close-prod": "docker-compose -f docker-compose-prod.yml down -v --rmi local",
-    "deploy": "gh-pages -d build"
+    "close-prod": "docker-compose -f docker-compose-prod.yml down -v --rmi local"
   },
   "eslintConfig": {
     "extends": "react-app"

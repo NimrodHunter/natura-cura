@@ -212,7 +212,7 @@ const ContibutionResponsive = () => {
         <ContibutionResponsiveStyle>
             <p className="estado"><BancoEstadoSVG width="10%" height="100%"/>Cuenta Vista { accounts[0].name } Número: { accounts[0].number}</p>
             <p className="bitcoin"><BitcoinSVG width="10%" height="100%"/><a href={accounts[1].link}>{ accounts[1].name }: </a><a href={accounts[1].link} className="bitcoinAddress">{ accounts[1].number}</a></p>
-            <p className="ethereum"><EthereumSVG width="10%" height="100%"/><a href={accounts[1].link}>{ accounts[2].name }: </a><a href={accounts[2].link} className="ethereumAddress">{ accounts[2].number}</a></p>
+            <p className="ethereum"><EthereumSVG width="10%" height="100%"/><a href={accounts[2].link}>{ accounts[2].name }: </a><a href={accounts[2].link} className="ethereumAddress">{ accounts[2].number}</a></p>
         </ContibutionResponsiveStyle>
     );
 }

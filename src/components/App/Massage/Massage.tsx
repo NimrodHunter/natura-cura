@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from 'styled-components'
+// import { pdfjs, Document } from 'react-pdf';
 
 import Engage from '../Contact/Engage'
+import Modal from './Modal';
 
-import backgroundImg from '../../../images/machupichu.png';
+import backgroundImg from '../../../files/images/machupichu.png';
 import BackGroundImg, { IBackGroundImgProps } from '../BackGroundImg/BackGroundImg';
 import MassageCard, { IMassageCardProps }  from './MassageCard';
-import relaxPhoto from '../../../images/sesion_kata_1.png'
+import relaxPhoto from '../../../files/images/sesion_kata_1.png';
 
+//import certificado from '../../../files/certificado_masaje.pdf';
+
+//pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
 
 const MassageImgStyle = styled("div")`
     padding: 0 7% 0 7%;
@@ -74,6 +79,7 @@ const CertificateBtnStyle = styled("button")`
     letter-spacing: 2px;
     font-weight: 500;
     line-height: 2em;
+    z-index: 10;
 
     background-color: transparent;
     color: #d9d9d9;
@@ -107,6 +113,16 @@ const CertificateBtnStyle = styled("button")`
         outline: none;
       }
     }
+  }
+`;
+
+const IframeStyle = styled("div")`
+  width: 100%;
+  height: 100%;
+  iframe {
+    height: 90%;
+    width: 100%;  
+    border: none;
   }
 `;
 
@@ -154,12 +170,26 @@ function Massage() {
     ]
   )
 
+  const modalRef = useRef(null);	
+
+  const openCertificate = () => {	
+    // @ts-ignore: Object is possibly 'null'.
+    modalRef.current.openModal()	
+
+  }
+  //<Document file= "https://drive.google.com/open?id=1MX8j07hNqhyW8meFyVeMY5taeWrIFKWp" />
+
   return (
     <div >
+      <Modal ref = { modalRef} >
+        <IframeStyle>
+          <iframe title="certificate" src="https://drive.google.com/file/d/1MX8j07hNqhyW8meFyVeMY5taeWrIFKWp/preview"/>
+        </IframeStyle>
+      </Modal >
       <BackGroundImg { ...topImg } >
         <p className="initialText">Opciones de masajes</p>
         <p style= { pStyle }>
-          <CertificateBtnStyle><a href='https://drive.google.com/file/d/1MX8j07hNqhyW8meFyVeMY5taeWrIFKWp/view?usp=sharing' download={ true }>Certificado</a></CertificateBtnStyle>
+          <CertificateBtnStyle onClick = { openCertificate } >Certificado</CertificateBtnStyle>
         </p>
       </BackGroundImg >
       <MassageStyle>

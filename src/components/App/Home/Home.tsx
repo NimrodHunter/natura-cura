@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styled from 'styled-components'
 
-import backgroundImg from '../../../images/atardecer_copacabana.png';
-import middleBackgroundImg from '../../../images/bahia_isla_del_sol.png';
+import backgroundImg from '../../../files/images/atardecer_copacabana.png';
+import middleBackgroundImg from '../../../files/images/bahia_isla_del_sol.png';
 import BackGroundImg, { IBackGroundImgProps } from '../BackGroundImg/BackGroundImg';
-import scout from '../../../images/scout.png'
-import progra from '../../../images/programando.jpeg'
-import masaje from '../../../images/sesion_kata_2.png'
+import scout from '../../../files/images/scout.png'
+import progra from '../../../files/images/programando.jpeg'
+import masaje from '../../../files/images/sesion_kata_2.png'
 import ActivityCard, { IActivityCardProps } from './ActivityCard'
 
 
@@ -281,11 +281,11 @@ const Home = () => {
         </ActivitiesStyle>
         <BackGroundImg { ...middleImg } >
           <p className="middlePhrase">Natura Cura</p>
-          <p className="middleText">“Lo que buscas ya esta ahí, a veces solo tienes que detenerte y relajarte en ti mismo, dejar que se exprese lo que es”.</p>
+          <p className="middleText">“Lo que buscas ya esta ahí, solo tienes que detenerte y relajarte, dejar que se exprese lo que es”.</p>
         </BackGroundImg >
         <BottonStyle>
-          <p className="bottonPhrase">Natura Cura es un puente que restaurar la conexión con el cuerpo, de esta forma ayuda a la sanación del mismo.</p>
-          <p className="bottonText">El paciente entra en un estado de relajación presente, quedando atento a las sensaciones del cuerpo, en este estado observa como el terapeuta trabaja las zonas bloqueadas que interrumpen el flujo natural del cuerpo. Al sentir los cambios evalua su evolucion en el tiempo.</p>
+          <p className="bottonPhrase">Natura Cura es un puente que restaura la conexión con el cuerpo, de esta forma ayuda a la sanación del mismo.</p>
+          <p className="bottonText">El paciente entra en un estado de relajación presente, quedando atento a las sensaciones del cuerpo, en este estado observa como el terapeuta trabaja las zonas que interrumpen el flujo natural del cuerpo y lentamente siente como se disuelven las dolencias.</p>
         </BottonStyle>
     </React.Fragment>
   );

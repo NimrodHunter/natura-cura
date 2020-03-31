@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from 'styled-components'
 
-import backgroundImg from '../../../images/alcon_montaña7colores.png';
+import backgroundImg from '../../../files/images/alcon_montaña7colores.png';
 import BackGroundImg, { IBackGroundImgProps } from '../BackGroundImg/BackGroundImg';
 
 import Engage from './Engage'

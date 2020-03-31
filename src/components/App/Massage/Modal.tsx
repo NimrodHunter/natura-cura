@@ -14,7 +14,8 @@ const ModalStyle = styled("div")`
         top: 0;
         bottom: 0;
         left: 0;
-        right: 0;    
+        right: 0;
+        z-index: 100; 
     }
 
     .backdrop {
@@ -23,7 +24,7 @@ const ModalStyle = styled("div")`
         bottom: 0;
         left: 0;
         right: 0;
-        z-index: 100;
+        z-index: 101;
         background-color: rgba(0,0,0,0.3)
     }
 
@@ -32,12 +33,12 @@ const ModalStyle = styled("div")`
         top: 50%;
         left: 50%
         transform: translate(-50%, -50%);
-        height: 90vh;
-        width: 60vw;
+        height: 69vh;
+        width: 85vw;
         background-color: white;
         box-shadow: 0 0 10px rgba(0,0,0,0.25);
-        z-index: 101;
-        overflow-y: auto;
+        z-index: 102;
+        overflow-y: none;
         padding: 25px 10px 10px 10px 
         color: #181818;
         text-align: center;
@@ -48,6 +49,43 @@ const ModalStyle = styled("div")`
       border: none;
       float: right;
       z-index: 102;
+    }
+
+
+    @media (min-height: 736px) and (min-width: 410px) {
+        .box {
+            height: 61vh;
+        }
+    }
+
+    @media (min-height: 735px) and (min-width: 413px) {
+        .box {
+            height: 69vh;
+        }
+    }
+
+    @media (min-height: 810px) and (min-width: 374px) {
+        .box {
+            height: 56vh;
+        }
+    }
+
+    @media (min-height: 1023px) and (min-width: 750px) {
+        .box {
+            height: 70vh;
+        }
+    }
+
+    @media (min-height: 850px) and (min-width: 1023px) {
+        .box {
+            height: 75vh;
+        }
+    }
+
+    @media (min-height: 650px) and (min-width: 1423px) {
+        .box {
+            width: 50vw;
+        }
     }
   `;
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from 'styled-components'
 
-import backgroundImg from '../../../images/mariposa_copacabana.png';
+import backgroundImg from '../../../files/images/mariposa_copacabana.png';
 import BackGroundImg, { IBackGroundImgProps } from '../BackGroundImg/BackGroundImg';
 
 
@@ -138,8 +138,8 @@ const About = () => {
         <p className="secondText">un gusto poder conocernos.</p>
       </BackGroundImg >
       <AboutMessageStyle>
-        <p className="initialText">Anibal Catalán contribuye a la sanación de sus pacientes ayudándoles a armonizar con el flujo natural del cuerpo. Utilizando el cuerpo como canal, a través de las manos, ayuda con la disolución parcial o total de bloqueos que pudieran estar obstruyendo la libre expresión de la naturaleza de cada uno.</p>
-        <p className="secondText">A través del masaje Anibal se sincroniza con el paciente, llevándolo a un estado de relajación desde el cual procede a identificar y limpiar parcial o totalmente las obstrucciones que se presenten. Al mismo tiempo conversa con el paciente con el fin de que sea consciente de las sensaciones del cuerpo y pueda experimentar cambios en el tiempo y hacer seguimiento de su estado físico presente. Reestableciendo la conexión del paciente con su cuerpo.</p>
+        <p className="initialText">Anibal Catalán contribuye a la sanación de sus pacientes ayudándoles a armonizar con el flujo natural de su cuerpo. Utilizando el cuerpo como canal, a través de las manos, ayuda con la disolución parcial o total de bloqueos que pudieran estar obstruyendo la libre expresión de la naturaleza de cada uno.</p>
+        <p className="secondText">A través del masaje Anibal se sincroniza con el paciente, llevándolo a un estado de relajación desde el cual procede a identificar y limpiar parcial o totalmente las obstrucciones que se presenten. Al mismo tiempo conversa con el paciente con el fin de que sea consciente de las sensaciones del cuerpo y pueda experimentar cambios en el. Con esta practica podrá hacer seguimiento de su estado físico, reestableciendo la conexión del paciente con su cuerpo.</p>
       </AboutMessageStyle>
     </React.Fragment>
   );
